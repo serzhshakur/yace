@@ -7,7 +7,7 @@ edition = "2021"
 
 [dev-dependencies]
 anyhow = "1"
-cucumber = { version = "0.15", features = ["output-junit"] }
+cucumber = { version = "0.17", features = ["output-junit"] }
 tokio = { version = "1.17", features = ["macros", "rt-multi-thread", "time"] }
 
 [[test]]
