@@ -51,6 +51,7 @@ async fn main() -> anyhow::Result<()> {
                 .tee(writer::JUnit::for_tee(report_file, 0))
                 .normalized(),
         )
+        .fail_on_skipped()
         .run_and_exit("tests/features")
         .await;
 
