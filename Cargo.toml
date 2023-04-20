@@ -1,5 +1,5 @@
 [package]
-name = "my_cucumber"
+name = "yace"
 version = "0.1.0"
 edition = "2021"
 
@@ -7,8 +7,8 @@ edition = "2021"
 
 [dev-dependencies]
 anyhow = "1"
-cucumber = { version = "0.17", features = ["output-junit"] }
-tokio = { version = "1.17", features = ["macros", "rt-multi-thread", "time"] }
+cucumber = { version = "0.19", features = ["output-junit"] }
+tokio = { version = "1.24", features = ["macros", "rt-multi-thread", "time"] }
 
 [[test]]
 name = "example"
