@@ -1,0 +1,15 @@
+{
+    "cucumberautocomplete.steps": [
+        "tests/steps.rs"
+    ],
+    "cucumberautocomplete.customParameters": [
+        {
+            "parameter": "regex = r#",
+            "value": ""
+        },
+        {
+            "parameter": "expr = ",
+            "value": ""
+        }
+    ]
+}
