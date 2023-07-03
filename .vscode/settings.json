@@ -1,6 +1,6 @@
 {
     "cucumberautocomplete.steps": [
-        "tests/steps.rs"
+        "src/steps.rs"
     ],
     "cucumberautocomplete.customParameters": [
         {

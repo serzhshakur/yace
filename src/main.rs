@@ -5,13 +5,12 @@ use std::{
 
 use anyhow::{Context, Ok};
 use cucumber::{writer, World, WriterExt};
-use steps::MyWorld;
-mod steps;
+use yace::world::MyWorld;
 
 fn create_report_file(file_path: &str) -> anyhow::Result<File> {
     let file_path = PathBuf::from(file_path);
     let reports_dir = file_path.parent().context("Unable to get parent dir")?;
-    fs::create_dir_all(&reports_dir)?;
+    fs::create_dir_all(reports_dir)?;
 
     fs::File::create(&file_path).context(format!("can't create file {file_path:?}"))
 }
@@ -27,7 +26,7 @@ async fn main() -> anyhow::Result<()> {
                 .normalized(),
         )
         .fail_on_skipped()
-        .run_and_exit("tests/features")
+        .run_and_exit("features")
         .await;
 
     Ok(())

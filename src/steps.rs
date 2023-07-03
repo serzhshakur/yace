@@ -1,16 +1,6 @@
-use cucumber::{given, then, when, World};
+use cucumber::{given, then, when};
 
-#[derive(Debug, World, Default)]
-#[world(init = Self::new)]
-pub struct MyWorld {
-    count: i32,
-}
-
-impl MyWorld {
-    fn new() -> Self {
-        Self { count: 0 }
-    }
-}
+use crate::world::MyWorld;
 
 #[given(expr = "I start with {int} items")]
 async fn init(world: &mut MyWorld, count: i32) {

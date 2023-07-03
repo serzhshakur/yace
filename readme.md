@@ -4,8 +4,13 @@ This repo was created to report issues to [cucumber-rs](https://github.com/cucum
 
 ## Running tests
 
-In order to run Cucumber tests under `tests/features` execute the following command
+In order to run Cucumber tests under `./features` execute the following command
 
 ```
-cargo test --test example
+cargo run
+```
+or with Cucumber flags 
+
+```
+cargo run -- --retry=1 --tags="not @flaky"
 ```
