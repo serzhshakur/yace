@@ -1,0 +1,9 @@
+[package]
+name = "features_generator"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0.70"
+clap = { version = "4.3.10", features = ["derive"] }
+rand = "0.8.5"
