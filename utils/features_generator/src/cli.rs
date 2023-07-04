@@ -9,7 +9,7 @@ pub struct Cli {
     #[arg(short, long)]
     pub output_dir: PathBuf,
     /// Number of features to generate
-    #[arg(long, value_parser = clap::value_parser!(u16).range(5..1000))]
+    #[arg(long, value_parser = clap::value_parser!(u16).range(5..5000))]
     pub features_count: u16,
     /// Max delay in seconds
     #[arg(long, default_value_t = 10, value_parser = clap::value_parser!(u16).range(1..))]

@@ -1,4 +1,5 @@
 use std::{
+    env,
     fs::{self, File},
     path::PathBuf,
 };
@@ -17,6 +18,7 @@ fn create_report_file(file_path: &str) -> anyhow::Result<File> {
 
 #[tokio::main]
 async fn main() -> anyhow::Result<()> {
+    let features_path = env::var("FEATURES").unwrap_or("features".to_string());
     let report_file = create_report_file("test-reports/report.xml")?;
     MyWorld::cucumber()
         .with_writer(
@@ -26,7 +28,7 @@ async fn main() -> anyhow::Result<()> {
                 .normalized(),
         )
         .fail_on_skipped()
-        .run_and_exit("features")
+        .run_and_exit(features_path)
         .await;
 
     Ok(())
