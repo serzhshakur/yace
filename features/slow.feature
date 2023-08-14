@@ -1,4 +1,5 @@
-Feature: My test
+@slow
+Feature: My slow test
 
   Scenario: counting items
     Given I start with 2 items

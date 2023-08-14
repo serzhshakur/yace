@@ -1,3 +1,4 @@
+@unimplemented
 Feature: Failing skipped steps
 
   Scenario: fail on skipped
