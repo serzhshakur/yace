@@ -1,10 +1,10 @@
 [package]
 name = "yace"
 version = "0.1.0"
-edition = "2021"
+edition = "2024"
 
 [dependencies]
 anyhow = "1"
-cucumber = { version = "0.19", features = ["output-junit"] }
-rand = "0.8.5"
-tokio = { version = "1.24", features = ["macros", "rt-multi-thread", "time"] }
+cucumber = { version = "0.21", features = ["output-junit"] }
+rand = "0.9"
+tokio = { version = "1.47", features = ["macros", "rt-multi-thread", "time"] }
